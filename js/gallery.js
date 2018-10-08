@@ -4,6 +4,8 @@ function activeGallery() {
 	thumbnails.forEach(function(thumbnail){
 		thumbnail.addEventListener("click", function(){
 			let newImageSrc    = thumbnail.dataset.largeVersion;
+			let largeVersion = new Image();
+			largeVersion.src = newImageSrc;
 			const currentClass = "current";
 			mainImage.setAttribute("src", newImageSrc);
 			mainImage.setAttribute("alt", thumbnail.alt);
